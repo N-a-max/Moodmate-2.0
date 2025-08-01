@@ -1,0 +1,138 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+}
+
+h1 {
+    color: #4a4a4a;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: #6c757d;
+    margin-bottom: 2rem;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    font-size: 1rem;
+    resize: vertical;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result-container {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    text-align: left;
+    background-color: #f8f9fa;
+}
+
+#result-container.hidden {
+    display: none;
+}
+
+blockquote {
+    font-style: italic;
+    color: #495057;
+    border-left: 4px solid #007bff;
+    padding-left: 1rem;
+    margin: 1rem 0 0 0;
+}
+.spotify-btn {
+    display: inline-block;
+    background-color: #1DB954;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.spotify-btn:hover {
+    background-color: #1ed760;
+    transform: scale(1.05);
+}
+/* Music Recommendation Styles */
+#music-container {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.track {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.track:hover {
+    background-color: #e9ecef;
+    transform: scale(1.02);
+}
+
+.track img {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    margin-right: 1rem;
+}
+
+.track-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.track-name {
+    font-weight: 600;
+}
+
+.track-artist {
+    font-size: 0.9rem;
+    color: #6c757d;
+}

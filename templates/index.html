@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodMate</title>
+    <link href="http://googleusercontent.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        {% if current_user %}
+            <div class="welcome-banner">
+                <p>Welcome, {{ current_user.display_name }}!</p>
+                <a href="/logout">Logout</a>
+            </div>
+        {% else %}
+            <a href="/login" class="spotify-btn">Login with Spotify</a>
+        {% endif %}
+
+        <h1>MoodMate ✨</h1>
+        <p>How are you feeling today? Let's find the perfect vibe for you.</p>
+        
+        <form id="mood-form">
+            <textarea id="mood-text" placeholder="e.g., I had a wonderful and productive day..." required></textarea>
+            <button type="submit">
+                <span class="button-text">Get Recommendation</span>
+                <div class="spinner hidden"></div>
+            </button>
+        </form>
+
+        <div id="result-container" class="hidden">
+            <h2>Your Result</h2>
+            <p><strong>Emotion:</strong> <span id="detected-emotion"></span></p>
+            <blockquote id="recommended-quote"></blockquote>
+        </div>
+        
+        <div id="music-container" class="hidden">
+            <h2>Music For Your Mood</h2>
+            <div id="music-list"></div>
+        </div>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
